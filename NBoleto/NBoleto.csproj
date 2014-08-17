@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EB558356-E8AC-4580-8A99-196C5BD84896}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NBoleto</RootNamespace>
+    <AssemblyName>NBoleto</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bancos\Banrisul.cs" />
+    <Compile Include="Bancos\BancoBrasil.cs" />
+    <Compile Include="Bancos\Bradesco.cs" />
+    <Compile Include="Bancos\Caixa.cs" />
+    <Compile Include="Bancos\HSBC.cs" />
+    <Compile Include="Bancos\Itau.cs" />
+    <Compile Include="Bancos\Santander.cs" />
+    <Compile Include="Boleto.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\BarCodeBase.cs" />
+    <Compile Include="Utils\C2of5i.cs" />
+    <Compile Include="Utils\FixedString.cs" />
+    <Compile Include="Utils\Helper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Logos\001.jpg" />
+    <EmbeddedResource Include="Logos\003.jpg" />
+    <EmbeddedResource Include="Logos\004.jpg" />
+    <EmbeddedResource Include="Logos\008.jpg" />
+    <EmbeddedResource Include="Logos\021.jpg" />
+    <EmbeddedResource Include="Logos\024.jpg" />
+    <EmbeddedResource Include="Logos\027.jpg" />
+    <EmbeddedResource Include="Logos\029.jpg" />
+    <EmbeddedResource Include="Logos\033.jpg" />
+    <EmbeddedResource Include="Logos\041.jpg" />
+    <EmbeddedResource Include="Logos\047.jpg" />
+    <EmbeddedResource Include="Logos\070.jpg" />
+    <EmbeddedResource Include="Logos\104.jpg" />
+    <EmbeddedResource Include="Logos\151.jpg" />
+    <EmbeddedResource Include="Logos\237.jpg" />
+    <EmbeddedResource Include="Logos\244.jpg" />
+    <EmbeddedResource Include="Logos\246.jpg" />
+    <EmbeddedResource Include="Logos\263.jpg" />
+    <EmbeddedResource Include="Logos\266.jpg" />
+    <EmbeddedResource Include="Logos\275.jpg" />
+    <EmbeddedResource Include="Logos\291.jpg" />
+    <EmbeddedResource Include="Logos\320.jpg" />
+    <EmbeddedResource Include="Logos\341.jpg" />
+    <EmbeddedResource Include="Logos\347.jpg" />
+    <EmbeddedResource Include="Logos\353.jpg" />
+    <EmbeddedResource Include="Logos\356.jpg" />
+    <EmbeddedResource Include="Logos\389.jpg" />
+    <EmbeddedResource Include="Logos\392.jpg" />
+    <EmbeddedResource Include="Logos\399.jpg" />
+    <EmbeddedResource Include="Logos\409.jpg" />
+    <EmbeddedResource Include="Logos\422.jpg" />
+    <EmbeddedResource Include="Logos\424.jpg" />
+    <EmbeddedResource Include="Logos\453.jpg" />
+    <EmbeddedResource Include="Logos\479.jpg" />
+    <EmbeddedResource Include="Logos\600.jpg" />
+    <EmbeddedResource Include="Logos\604.jpg" />
+    <EmbeddedResource Include="Logos\610.jpg" />
+    <EmbeddedResource Include="Logos\623.jpg" />
+    <EmbeddedResource Include="Logos\633.jpg" />
+    <EmbeddedResource Include="Logos\637.jpg" />
+    <EmbeddedResource Include="Logos\641.jpg" />
+    <EmbeddedResource Include="Logos\643.jpg" />
+    <EmbeddedResource Include="Logos\702.jpg" />
+    <EmbeddedResource Include="Logos\707.jpg" />
+    <EmbeddedResource Include="Logos\721.jpg" />
+    <EmbeddedResource Include="Logos\738.jpg" />
+    <EmbeddedResource Include="Logos\741.jpg" />
+    <EmbeddedResource Include="Logos\745.jpg" />
+    <EmbeddedResource Include="Logos\748.jpg" />
+    <EmbeddedResource Include="Logos\749.jpg" />
+    <EmbeddedResource Include="Logos\756.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
