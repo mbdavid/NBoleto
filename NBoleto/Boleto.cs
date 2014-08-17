@@ -13,8 +13,8 @@ namespace NBoleto
 {
     public abstract class Boleto
     {
-        public const string DATEFORMAT = "dd/MM/yyyy";
-        public const string MONEYFORMAT = "#,0.00";
+        internal const string DATE_FORMAT = "dd/MM/yyyy";
+        internal const string MONEY_FORMAT = "#,0.00";
 
         protected abstract void ValidaDados(Cedente cedente, string nossoNumero);
         protected abstract string FormataNossoNumero(string nossoNumero, Cedente cedente, DateTime dtVencto);
@@ -51,11 +51,11 @@ namespace NBoleto
             b.Cedente = cedente.Nome + " (CNPJ: " + Helper.FormatCpfCnpj(cedente.CNPJ) + ")";
             b.Carteira = cedente.Carteira;
             b.NumeroDocumento = nossoNumero;
-            b.DataProcessamento = DateTime.Now.ToString(DATEFORMAT);
-            b.DataDocumento = DateTime.Now.ToString(DATEFORMAT);
+            b.DataProcessamento = DateTime.Now.ToString(DATE_FORMAT);
+            b.DataDocumento = DateTime.Now.ToString(DATE_FORMAT);
             b.LocalPagamento = "QUALQUER AGÊNCIA BANCÁRIA ATÉ A DATA DO VENCIMENTO";
-            b.DataVencimento = dtVencto.ToString(DATEFORMAT);
-            b.ValorDocumento = vrBoleto.ToString(MONEYFORMAT);
+            b.DataVencimento = dtVencto.ToString(DATE_FORMAT);
+            b.ValorDocumento = vrBoleto.ToString(MONEY_FORMAT);
             b.Instrucoes = "ATENÇÃO SENHOR CAIXA: NÃO RECEBER APÓS VENCIMENTO";
 
 #if !DEBUG
@@ -119,5 +119,4 @@ namespace NBoleto
     }
 
     #endregion
-
 }

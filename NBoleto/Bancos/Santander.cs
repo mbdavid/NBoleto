@@ -39,10 +39,8 @@ namespace NBoleto.Bancos
         {
             return cedente.Agencia + "/" + cedente.CodCedente;
         }
+
         /// <summary>
-        /// 
-        ///   *******
-        /// 
         ///	O código de barra para cobrança contém 44 posições dispostas da seguinte forma:
         ///    01 a 03 -  3 - 033 fixo - Código do banco
         ///    04 a 04 -  1 - 9 fixo - Código da moeda (R$)
@@ -54,9 +52,6 @@ namespace NBoleto.Bancos
         ///    28 a 40 - 13 - Nosso número
         ///    41 - 41 - 1 -  IOS  - Seguradoras(Se 7% informar 7. Limitado  a 9%) Demais clientes usar 0 
         ///    42 - 44 - 3 - Tipo de modalidade da carteira 101, 102, 201
-        /// 
-        ///   *******
-        /// 
         /// </summary>
         protected override CodigoBarras GerarCodigoBarras(Cedente cedente, string nossoNumero, DateTime dtVencto, decimal vrBoleto)
         {
@@ -76,10 +71,8 @@ namespace NBoleto.Bancos
 
             return barras;
         }
+
         /// <summary>
-        /// 
-        ///   *******
-        /// 
         ///	A Linha Digitavel para cobrança contém 44 posições dispostas da seguinte forma:
         ///   1º Grupo - 
         ///    01 a 03 -  3 - 033 fixo - Código do banco
@@ -101,8 +94,6 @@ namespace NBoleto.Bancos
         ///   5º Grupo -
         ///    34 - 36 - 4 - Fator de vencimento
         ///    37 - 47 - 10 - Valor do título
-        ///   *******
-        /// 
         /// </summary>
         protected override LinhaDigitavel GerarLinhaDigitavel(CodigoBarras barras)
         {
@@ -135,8 +126,5 @@ namespace NBoleto.Bancos
 
             return linha;
         }
-
-
     }
-
 }

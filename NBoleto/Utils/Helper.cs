@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace NBoleto.Utils
 {
-    public class Helper
+    internal class Helper
     {
         public static string FatorVencimento(DateTime dtVencto)
         {

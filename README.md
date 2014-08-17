@@ -59,5 +59,5 @@ boleto.SacadoEndereco
 Esta biblioteca foi montada a partir dos documentos disponibilizados pelos bancos em seus sites.
 Todos os documentos utilizados estão no diretorio `\Docs` e foram feitos apenas testes internos.
 
-**ATENÇÃO: ** Os boletos não foram homologados junto aos bancos. Eu até que tentei, mas a burocracia era tanta que não tive paciencia! Ou seja, use a seu risco! 
+**ATENÇÃO:** Os boletos não foram homologados junto aos bancos. Eu até que tentei, mas a burocracia era tanta que não tive paciencia! Ou seja, use a seu risco! 
 

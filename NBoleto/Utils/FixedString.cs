@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace NBoleto.Utils
 {
@@ -123,7 +122,7 @@ namespace NBoleto.Utils
 
         public override string ToString()
         {
-            return string.Join("", Value);
+            return string.Join("", this.Value.Select(x => x.ToString()).ToArray());
         }
     }
 }

@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>NBoleto</id>
-        <version>1.0.0</version>
+        <version>1.0.3</version>
         <title>NBoleto</title>
         <authors>Mauricio</authors>
         <projectUrl>https://github.com/mbdavid/NBoleto</projectUrl>
@@ -14,6 +14,6 @@
         <tags>boleto banco bloqueto</tags>
     </metadata>
     <files>
-        <file src="NBoleto\bin\Release\NBoleto.dll" target="NBoleto.dll" />
+        <file src="..\NBoleto\bin\Release\NBoleto.dll" target="lib\net35\NBoleto.dll" />
     </files>
 </package>
