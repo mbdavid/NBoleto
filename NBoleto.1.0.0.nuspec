@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>NBoleto</id>
+        <version>1.0.0</version>
+        <title>NBoleto</title>
+        <authors>Mauricio</authors>
+        <projectUrl>https://github.com/mbdavid/NBoleto</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>O NBoleto é uma biblioteca para gerar boleto bancário não registrado</description>
+        <summary>O NBoleto é uma biblioteca para gerar boleto bancário não registrado</summary>
+        <copyright>MIT</copyright>
+        <language>pt-BR</language>
+        <tags>boleto banco bloqueto</tags>
+    </metadata>
+    <files>
+        <file src="NBoleto\bin\Release\NBoleto.dll" target="NBoleto.dll" />
+    </files>
+</package>
